@@ -3,7 +3,7 @@
         <div class="col-8 offset-2">
     <h2>Create a new listing</h2>
     <br><br>
-    <form method="POST" action="/listings">
+    <form method="POST" action="/listings" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -11,7 +11,9 @@
           name="listing[title]"
           placeholder="Add a catchy title"
           class="form-control"
+          required
         />
+        <div class="valid-feedback">Title looks good!</div>
       </div>
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
@@ -19,7 +21,9 @@
           type="text"
           name="listing[description]"
           class="form-control"
+          required
         ></textarea>
+      <div class="invalid-feedback">Please enter the short description</div>
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Image Link</label>
@@ -28,17 +32,19 @@
           name="listing[image]"
           placeholder="enter image url/link"
           class="form-control"
+          
         />
       </div>
       <div class="row">
       <div class="mb-3 col-md-4">
         <label for="price" class="form-label">Price</label>
         <input
-          type="number"
           name="listing[price]"
           placeholder="1200"
           class="form-control"
+          required
         />
+        <div class="invalid-feedback">Please enter the valid price</div>
       </div>
       <div class="mb-3 col-md-8">
         <label for="country" class="form-label">Country</label>
@@ -47,7 +53,9 @@
           name="listing[country]"
           placeholder="india"
           class="form-control"
+          required
         />
+        <div class="invalid-feedback">Country name should be valid</div>
       </div>
       </div>
       <div class="mb-3">
@@ -57,7 +65,9 @@
             name="listing[location]"
             placeholder="enter location"
             class="form-control"
+            required
             />
+            <div class="invalid-feedback">Location should be valid</div>
         </div>
       <button class="btn btn-dark add-btn mt-3">Add</button>
       <br><br>
