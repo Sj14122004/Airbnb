@@ -5,3 +5,11 @@ Express Router:-  Way to organise your express application such that our primary
 const router = express.Router();
 
 Cookies = Http cookies are small blocks of data created by a web server while a user is browsing a website and placed on the users computer or other devices by the users web browser
+
+State ==> Stateful Protocol require server to save the status and session information
+
+Stateless protocol does not require the server to retain the server information 
+
+Express Session => An attempt to make our session stateful
+
+Connect-flash => the flash is a special area of the session used for storing messages.messages are written to the flash and cleared after being displayed to the user
